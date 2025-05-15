@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Services | Best Quality at Best Prices</title>
+    <style>
+        /* CSS Reset & Base Styles */
+        :root {
+            --primary: #4501ee;
+            --primary-dark: #3a0ca3;
+            --secondary: #f72585;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --success: #4cc9f0;
+            --warning: #f8961e;
+            --danger: #ef233c;
+            --gray: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background-color: #d91a6d;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .platform-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .platform-tab {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .platform-tab.active, .platform-tab:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .platform-tab i {
+            font-size: 1.2rem;
+        }
+        
+        .view-all {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .service-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-header p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .service-body {
+            padding: 1.5rem;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-primary {
+            background-color: #e3f2fd;
+            color: var(--primary);
+        }
+        
+        .badge-success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .badge-warning {
+            background-color: #fff8e1;
+            color: #ff8f00;
+        }
+        
+        .badge-indian {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        
+        .service-footer {
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .add-to-cart:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 4rem 1rem;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .cart-sidebar.open {
+            right: 0;
+        }
+        
+        .cart-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cart-header h3 {
+            font-size: 1.5rem;
+        }
+        
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+        }
+        
+        .cart-items {
+            padding: 1.5rem;
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item-info h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .cart-item-price {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: var(--danger);
+            cursor: pointer;
+        }
+        
+        .cart-total {
+            padding: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .cart-total h4 {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--success);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .checkout-btn:hover {
+            background-color: #3aa8d8;
+        }
+        
+        /* Payment Section */
+        .payment-section {
+            display: none;
+            padding: 1.5rem;
+        }
+        
+        .payment-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .payment-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .qr-code-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        .qr-code {
+            max-width: 200px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        
+        .payment-form {
+            margin-top: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .required-links {
+            margin-top: 1.5rem;
+        }
+        
+        .link-group {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .link-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+        
+        .link-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .link-description {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .same-link-option {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .same-link-option label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            color: var(--dark);
+        }
+        
+        .same-link-option input {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+        
+        .notice {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .submit-order {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .submit-order:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .back-to-cart {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--gray);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        .back-to-cart:hover {
+            background-color: #5a6268;
+        }
+        
+        /* Cart Icon */
+        .cart-icon {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--secondary);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 900;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+            
+            .cart-sidebar.open {
+                right: 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>𝗡-𝗛𝗔𝗖𝗞𝗘𝗥 ||🇮🇳</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Boost Your Social Media Presence</h1>
+        <p>Get high-quality followers, likes, views and more for all major platforms at the best prices with guaranteed delivery.</p>
+        <a href="#services" class="cta-button">View Services</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Choose from our wide range of high-quality social media services</p>
+        </div>
+        
+        <div class="platform-tabs">
+            <div class="platform-tab active" data-platform="all">
+                <i class="fas fa-globe"></i> All Platforms
+            </div>
+            <div class="platform-tab" data-platform="youtube">
+                <i class="fab fa-youtube"></i> YouTube
+            </div>
+            <div class="platform-tab" data-platform="instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </div>
+            <div class="platform-tab" data-platform="facebook">
+                <i class="fab fa-facebook"></i> Facebook
+            </div>
+            <div class="platform-tab" data-platform="telegram">
+                <i class="fab fa-telegram"></i> Telegram
+            </div>
+            <div class="platform-tab" data-platform="tiktok">
+                <i class="fab fa-tiktok"></i> TikTok
+            </div>
+            <div class="platform-tab" data-platform="twitter">
+                <i class="fab fa-twitter"></i> Twitter
+            </div>
+            <div class="platform-tab" data-platform="spotify">
+                <i class="fab fa-spotify"></i> Spotify
+            </div>
+            <div class="platform-tab" data-platform="whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </div>
+            <div class="platform-tab view-all" id="view-all-tab">
+                <i class="fas fa-eye"></i> View All
+            </div>
+        </div>
+        
+        <div class="services-grid">
+            <!-- YouTube Services -->
+            <div class="service-card" data-platform="youtube" data-category="subscribers">
+                <div class="service-header">
+                    <h3>YouTube Subscribers</h3>
+                    <p>High-quality subscribers for your YouTube channel</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹205</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-success">7 Day Refill</div>
+                    <p>1K YouTube Subscribers with guaranteed retention</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Subscribers (7 Day Refill)" data-price="205" data-type="youtube" data-link-type="channel">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="subscribers">
+                <div class="service-header">
+                    <h3>YouTube Subscribers</h3>
+                    <p>High-quality subscribers for your YouTube channel</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹215</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-success">14 Day Refill</div>
+                    <p>1K YouTube Subscribers with guaranteed retention</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Subscribers (14 Day Refill)" data-price="215" data-type="youtube" data-link-type="channel">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="subscribers">
+                <div class="service-header">
+                    <h3>YouTube Subscribers</h3>
+                    <p>High-quality subscribers for your YouTube channel</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹230</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-success">30 Day Refill</div>
+                    <p>1K YouTube Subscribers with guaranteed retention</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Subscribers (30 Day Refill)" data-price="230" data-type="youtube" data-link-type="channel">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="subscribers">
+                <div class="service-header">
+                    <h3>YouTube Subscribers</h3>
+                    <p>High-quality subscribers for your YouTube channel</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹450</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-success">Lifetime Refill</div>
+                    <p>1K YouTube Subscribers with guaranteed retention</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Subscribers (Lifetime Refill)" data-price="450" data-type="youtube" data-link-type="channel">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="subscribers">
+                <div class="service-header">
+                    <h3>YouTube Subscribers (Indian)</h3>
+                    <p>High-quality Indian subscribers</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹850</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-success">Lifetime Guarantee</div>
+                    <div class="badge badge-indian">Indian</div>
+                    <p>1K Indian YouTube Subscribers with guaranteed retention</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Indian YouTube Subscribers (Lifetime)" data-price="850" data-type="youtube" data-link-type="channel">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="views">
+                <div class="service-header">
+                    <h3>YouTube Views</h3>
+                    <p>Boost your video views instantly</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹180</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K High Retention YouTube Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Views" data-price="180" data-type="youtube" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="views">
+                <div class="service-header">
+                    <h3>YouTube AdWords Views</h3>
+                    <p>Google AdWords views for monetization</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹145</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Google AdWords Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube AdWords Views" data-price="145" data-type="youtube" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="watchtime">
+                <div class="service-header">
+                    <h3>YouTube Watch Time</h3>
+                    <p>Monetization guaranteed watch time</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹1,450</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-warning">Monetization</div>
+                    <p>1K Watch Time Hours (100% Monetization Guarantee)</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Watch Time" data-price="1450" data-type="youtube" data-link-type="channel">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="engagement">
+                <div class="service-header">
+                    <h3>YouTube Likes</h3>
+                    <p>Increase engagement on your videos</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹90</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K YouTube Likes</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Likes" data-price="90" data-type="youtube" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="engagement">
+                <div class="service-header">
+                    <h3>YouTube Live Stream Views</h3>
+                    <p>Boost your live stream viewers</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹240</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K YouTube Live Stream Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Live Stream Views" data-price="240" data-type="youtube" data-link-type="live">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="engagement">
+                <div class="service-header">
+                    <h3>YouTube Live Reactions</h3>
+                    <p>Increase engagement on your live streams</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹210</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K YouTube Live Stream Reactions</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Live Reactions" data-price="210" data-type="youtube" data-link-type="live">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="engagement">
+                <div class="service-header">
+                    <h3>YouTube Custom Comments</h3>
+                    <p>Increase engagement with custom comments</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹220</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K YouTube Custom Comments</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Custom Comments" data-price="220" data-type="youtube" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="youtube" data-category="engagement">
+                <div class="service-header">
+                    <h3>YouTube Emoji Comments</h3>
+                    <p>Increase engagement with emoji comments</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹430</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K YouTube Emoji Comments</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K YouTube Emoji Comments" data-price="430" data-type="youtube" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Instagram Services -->
+            <div class="service-card" data-platform="instagram" data-category="followers">
+                <div class="service-header">
+                    <h3>Instagram Followers Big Offer</h3>
+                    <p>₹50 Rupees 1K followers for your profile</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹50</div>
+                    <div class="badge badge-primary">No-Refill</div>
+                    <div class="badge badge-indian">Offer</div>
+                    <p>1K Instagram Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Indian Instagram Followers" data-price="50" data-type="instagram" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            
+            <div class="service-card" data-platform="instagram" data-category="followers">
+                <div class="service-header">
+                    <h3>Instagram Followers</h3>
+                    <p>Real-looking followers for your profile</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹200</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Global Instagram Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Followers" data-price="200" data-type="instagram" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="followers">
+                <div class="service-header">
+                    <h3>Instagram Followers (Indian)</h3>
+                    <p>Indian followers for your profile</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹230</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-indian">Indian</div>
+                    <p>1K Indian Instagram Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Indian Instagram Followers" data-price="230" data-type="instagram" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="views">
+                <div class="service-header">
+                    <h3>Instagram Views</h3>
+                    <p>Increase your video views</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹25</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>10K Instagram Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="10K Instagram Views" data-price="25" data-type="instagram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Likes</h3>
+                    <p>Increase engagement on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹20</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Likes</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Likes" data-price="20" data-type="instagram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Likes (Indian)</h3>
+                    <p>Indian likes for your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹30</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-indian">Indian</div>
+                    <p>1K Indian Instagram Likes</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Indian Instagram Likes" data-price="30" data-type="instagram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Story Views</h3>
+                    <p>Boost your story visibility</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹40</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Story Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Story Views" data-price="40" data-type="instagram" data-link-type="story">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Shares</h3>
+                    <p>Increase shares on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹80</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Shares</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Shares" data-price="80" data-type="instagram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Saves</h3>
+                    <p>Increase saves on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹50</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Saves</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Saves" data-price="50" data-type="instagram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Poll Voting</h3>
+                    <p>Increase votes on your polls</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹300</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Poll Votes</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Poll Votes" data-price="300" data-type="instagram" data-link-type="story">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Random Comments</h3>
+                    <p>Increase comments on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹115</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Random Comments</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Random Comments" data-price="115" data-type="instagram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Custom Comments</h3>
+                    <p>Custom comments for your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹150</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Custom Comments</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Custom Comments" data-price="150" data-type="instagram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Emoji Comments</h3>
+                    <p>Emoji comments for your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹100</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Emoji Comments</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Emoji Comments" data-price="100" data-type="instagram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="instagram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Instagram Live Stream Views</h3>
+                    <p>Boost your live stream viewers</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹130</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Instagram Live Stream Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Instagram Live Views" data-price="130" data-type="instagram" data-link-type="live">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Facebook Services -->
+            <div class="service-card" data-platform="facebook" data-category="followers">
+                <div class="service-header">
+                    <h3>Facebook Followers</h3>
+                    <p>Grow your Facebook page audience</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹160</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Global Facebook Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Facebook Followers" data-price="160" data-type="facebook" data-link-type="page">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="followers">
+                <div class="service-header">
+                    <h3>Facebook Followers (Indian)</h3>
+                    <p>Indian followers for your page</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹210</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-indian">Indian</div>
+                    <p>1K Indian Facebook Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Indian Facebook Followers" data-price="210" data-type="facebook" data-link-type="page">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="views">
+                <div class="service-header">
+                    <h3>Facebook Views</h3>
+                    <p>Increase your video views</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹50</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Facebook Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Facebook Views" data-price="50" data-type="facebook" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="engagement">
+                <div class="service-header">
+                    <h3>Facebook Live Stream Views</h3>
+                    <p>Boost your live stream viewers</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹380</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Facebook Live Stream Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Facebook Live Views" data-price="380" data-type="facebook" data-link-type="live">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="engagement">
+                <div class="service-header">
+                    <h3>Facebook Story Views</h3>
+                    <p>Increase your story views</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹90</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Facebook Story Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Facebook Story Views" data-price="90" data-type="facebook" data-link-type="story">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="engagement">
+                <div class="service-header">
+                    <h3>Facebook Post Shares</h3>
+                    <p>Increase shares on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹80</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Facebook Post Shares</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Facebook Post Shares" data-price="80" data-type="facebook" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="engagement">
+                <div class="service-header">
+                    <h3>Facebook Post Likes</h3>
+                    <p>Increase likes on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹110</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Facebook Post Likes</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Facebook Post Likes" data-price="110" data-type="facebook" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="engagement">
+                <div class="service-header">
+                    <h3>Facebook Post Reactions</h3>
+                    <p>Increase reactions on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹90</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Facebook Post Reactions</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Facebook Post Reactions" data-price="90" data-type="facebook" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="watchtime">
+                <div class="service-header">
+                    <h3>Facebook Watch Time (60K)</h3>
+                    <p>Increase your watch time hours</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹150</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>60K Facebook Watch Time</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="60K Facebook Watch Time" data-price="150" data-type="facebook" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="watchtime">
+                <div class="service-header">
+                    <h3>Facebook Watch Time (120K)</h3>
+                    <p>Increase your watch time hours</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹450</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>120K Facebook Watch Time</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="120K Facebook Watch Time" data-price="450" data-type="facebook" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="facebook" data-category="watchtime">
+                <div class="service-header">
+                    <h3>Facebook Watch Time (600K)</h3>
+                    <p>Increase your watch time hours</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹950</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>600K Facebook Watch Time</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="600K Facebook Watch Time" data-price="950" data-type="facebook" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Telegram Services -->
+            <div class="service-card" data-platform="telegram" data-category="members">
+                <div class="service-header">
+                    <h3>Telegram Members</h3>
+                    <p>Increase your group members</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹110</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Global Telegram Members</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Telegram Members" data-price="110" data-type="telegram" data-link-type="group">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="telegram" data-category="members">
+                <div class="service-header">
+                    <h3>Telegram Subscribers</h3>
+                    <p>Increase your channel subscribers</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹150</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Telegram Subscribers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Telegram Subscribers" data-price="150" data-type="telegram" data-link-type="channel">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="telegram" data-category="members">
+                <div class="service-header">
+                    <h3>Telegram Members (Indian)</h3>
+                    <p>Indian members for your group</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹290</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-indian">Indian</div>
+                    <p>1K Indian Telegram Members</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Indian Telegram Members" data-price="290" data-type="telegram" data-link-type="group">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="telegram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Telegram Post Views</h3>
+                    <p>Increase views on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹30</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Telegram Post Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Telegram Post Views" data-price="30" data-type="telegram" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="telegram" data-category="engagement">
+                <div class="service-header">
+                    <h3>Telegram Story Views</h3>
+                    <p>Increase views on your stories</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹120</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Telegram Story Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Telegram Story Views" data-price="120" data-type="telegram" data-link-type="story">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- TikTok Services -->
+            <div class="service-card" data-platform="tiktok" data-category="followers">
+                <div class="service-header">
+                    <h3>TikTok Followers</h3>
+                    <p>Grow your TikTok audience</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹190</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok Followers" data-price="190" data-type="tiktok" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="tiktok" data-category="views">
+                <div class="service-header">
+                    <h3>TikTok Views + Likes</h3>
+                    <p>Boost your video engagement</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹20</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok Views + Likes</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok Views + Likes" data-price="20" data-type="tiktok" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="tiktok" data-category="views">
+                <div class="service-header">
+                    <h3>TikTok Views</h3>
+                    <p>Boost your video views</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹15</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok Views" data-price="15" data-type="tiktok" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="tiktok" data-category="coins">
+                <div class="service-header">
+                    <h3>TikTok Coins</h3>
+                    <p>Get coins for your account</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹2,000</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok Coins</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok Coins" data-price="2000" data-type="tiktok" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="tiktok" data-category="engagement">
+                <div class="service-header">
+                    <h3>TikTok PK Battle Points</h3>
+                    <p>Increase your battle points</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹80</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok PK Battle Points</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok PK Battle Points" data-price="80" data-type="tiktok" data-link-type="live">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="tiktok" data-category="engagement">
+                <div class="service-header">
+                    <h3>TikTok Story Views</h3>
+                    <p>Increase your story views</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹90</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok Story Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok Story Views" data-price="90" data-type="tiktok" data-link-type="story">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="tiktok" data-category="engagement">
+                <div class="service-header">
+                    <h3>TikTok Story Shares</h3>
+                    <p>Increase shares on your stories</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹70</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok Story Shares</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok Story Shares" data-price="70" data-type="tiktok" data-link-type="story">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="tiktok" data-category="engagement">
+                <div class="service-header">
+                    <h3>TikTok Saves</h3>
+                    <p>Increase saves on your videos</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹45</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok Saves</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok Saves" data-price="45" data-type="tiktok" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="tiktok" data-category="engagement">
+                <div class="service-header">
+                    <h3>TikTok Video Downloads</h3>
+                    <p>Increase downloads on your videos</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹100</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K TikTok Video Downloads</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K TikTok Video Downloads" data-price="100" data-type="tiktok" data-link-type="video">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Twitter Services -->
+            <div class="service-card" data-platform="twitter" data-category="followers">
+                <div class="service-header">
+                    <h3>Twitter Followers</h3>
+                    <p>Grow your Twitter audience</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹140</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Global Twitter Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Twitter Followers" data-price="140" data-type="twitter" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="twitter" data-category="followers">
+                <div class="service-header">
+                    <h3>Twitter Followers (Indian)</h3>
+                    <p>Indian followers for your profile</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹190</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-indian">Indian</div>
+                    <p>1K Indian Twitter Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Indian Twitter Followers" data-price="190" data-type="twitter" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="twitter" data-category="engagement">
+                <div class="service-header">
+                    <h3>Twitter Likes</h3>
+                    <p>Increase likes on your tweets</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹85</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Twitter Likes</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Twitter Likes" data-price="85" data-type="twitter" data-link-type="tweet">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="twitter" data-category="engagement">
+                <div class="service-header">
+                    <h3>Twitter Views</h3>
+                    <p>Increase views on your tweets</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹15</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Twitter Views</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Twitter Views" data-price="15" data-type="twitter" data-link-type="tweet">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="twitter" data-category="engagement">
+                <div class="service-header">
+                    <h3>Twitter Poll Votes</h3>
+                    <p>Increase votes on your polls</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹80</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Twitter Poll Votes</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Twitter Poll Votes" data-price="80" data-type="twitter" data-link-type="tweet">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Spotify Services -->
+            <div class="service-card" data-platform="spotify" data-category="followers">
+                <div class="service-header">
+                    <h3>Spotify Followers</h3>
+                    <p>Grow your Spotify followers</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹140</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Spotify Followers</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Spotify Followers" data-price="140" data-type="spotify" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="spotify" data-category="plays">
+                <div class="service-header">
+                    <h3>Spotify Plays (Indian)</h3>
+                    <p>Indian plays for your playlist</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹190</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <div class="badge badge-indian">Indian</div>
+                    <p>1K Indian Spotify Playlist Plays</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Indian Spotify Plays" data-price="190" data-type="spotify" data-link-type="playlist">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="spotify" data-category="plays">
+                <div class="service-header">
+                    <h3>Spotify Plays</h3>
+                    <p>Increase your song plays</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹75</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Spotify Plays</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Spotify Plays" data-price="75" data-type="spotify" data-link-type="track">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="spotify" data-category="listeners">
+                <div class="service-header">
+                    <h3>Spotify Monthly Listeners</h3>
+                    <p>Increase your monthly listeners</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹310</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Spotify Monthly Listeners</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Spotify Monthly Listeners" data-price="310" data-type="spotify" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="spotify" data-category="plays">
+                <div class="service-header">
+                    <h3>Spotify Playlist Plays</h3>
+                    <p>Increase your playlist plays</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹190</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Spotify Playlist Plays</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Spotify Playlist Plays" data-price="190" data-type="spotify" data-link-type="playlist">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="spotify" data-category="saves">
+                <div class="service-header">
+                    <h3>Spotify Saves</h3>
+                    <p>Increase saves on your tracks</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹100</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K Spotify Saves</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K Spotify Saves" data-price="100" data-type="spotify" data-link-type="track">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="spotify" data-category="package">
+                <div class="service-header">
+                    <h3>Spotify Package</h3>
+                    <p>Complete package for your tracks</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹700</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>3K Spotify Package (Plays + Followers + Saves)</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="3K Spotify Package" data-price="700" data-type="spotify" data-link-type="profile">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- WhatsApp Services -->
+            <div class="service-card" data-platform="whatsapp" data-category="members">
+                <div class="service-header">
+                    <h3>WhatsApp Channel Members</h3>
+                    <p>Increase your channel members</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹520</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K WhatsApp Channel Members</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K WhatsApp Channel Members" data-price="520" data-type="whatsapp" data-link-type="channel">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-platform="whatsapp" data-category="engagement">
+                <div class="service-header">
+                    <h3>WhatsApp Post Reactions</h3>
+                    <p>Increase reactions on your posts</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹470</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1K WhatsApp Post Reactions</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1K WhatsApp Post Reactions" data-price="470" data-type="whatsapp" data-link-type="post">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Canva Service -->
+            <div class="service-card" data-platform="canva" data-category="subscription">
+                <div class="service-header">
+                    <h3>Canva Pro Subscription</h3>
+                    <p>Premium design tools for 1 year</p>
+                </div>
+                <div class="service-body">
+                    <div class="price">₹200</div>
+                    <div class="badge badge-primary">Non-Drop</div>
+                    <p>1-Year Canva Pro Subscription</p>
+                </div>
+                <div class="service-footer">
+                    <button class="add-to-cart" data-service="1-Year Canva Pro" data-price="200" data-type="canva" data-link-type="account">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="section-title">
+                <h2>Why Choose Us</h2>
+                <p>We provide the best quality services with guaranteed results</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Top Quality</h3>
+                    <p>Our services use high-quality accounts that won't drop or get removed.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Refill Guarantee</h3>
+                    <p>If any drops occur, we'll refill your order within the guarantee period.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Most orders start within minutes and complete within hours.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our support team is always available to help with any issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">
+            <h4>Total: <span id="cart-total-amount">₹0</span></h4>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+        
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <div class="payment-header">
+                <h3>Complete Your Payment</h3>
+                <p>Scan the QR code to pay via UPI</p>
+            </div>
+            
+            <div class="qr-code-container">
+                <div id="qr-code"></div>
+                <p>UPI ID: nadim.74x-1@okhdfcbank</p>
+                <p>Amount: <span id="payment-amount">₹0</span></p>
+            </div>
+            
+            <div class="payment-form">
+                <div class="form-group">
+                    <label for="payment-name">What name are you paying in?</label>
+                    <input type="text" id="payment-name" placeholder="Enter name as per UPI payment" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="payment-number">Your WhatsApp Number</label>
+                    <input type="tel" id="payment-number" placeholder="Enter your WhatsApp number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="payment-utr">Payment UTR/Transaction ID</label>
+                    <input type="text" id="payment-utr" placeholder="Enter UPI transaction reference number" required>
+                </div>
+                
+                <div class="required-links">
+                    <!-- Link fields will be added here dynamically -->
+                </div>
+                
+                <div class="notice">
+                    <p><strong>Important Notice:</strong> If you're purchasing followers/likes for your account, please ensure your account is not set to private. Private accounts may experience issues with delivery.</p>
+                </div>
+                
+                <button class="submit-order">Place Order</button>
+                <button class="back-to-cart">Back to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cart Icon -->
+    <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <div class="cart-count">0</div>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>SocialBoost</span>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            
+            <p class="copyright">© 2023 SocialBoost. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Platform Tabs Filter
+            const platformTabs = document.querySelectorAll('.platform-tab');
+            const serviceCards = document.querySelectorAll('.service-card');
+            const viewAllTab = document.getElementById('view-all-tab');
+            
+            // Function to filter services by platform
+            function filterServices(platform) {
+                serviceCards.forEach(card => {
+                    if (platform === 'all' || card.dataset.platform === platform) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            // View All functionality
+            viewAllTab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                platformTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to view all tab
+                this.classList.add('active');
+                // Show all services
+                serviceCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+            });
+            
+            platformTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    if (this === viewAllTab) return;
+                    
+                    // Remove active class from all tabs
+                    platformTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    const platform = this.dataset.platform;
+                    filterServices(platform);
+                });
+            });
+            
+            // Cart Functionality
+            const cartIcon = document.querySelector('.cart-icon');
+            const cartSidebar = document.querySelector('.cart-sidebar');
+            const closeCart = document.querySelector('.close-cart');
+            const overlay = document.querySelector('.overlay');
+            const cartItemsContainer = document.querySelector('.cart-items');
+            const cartTotalAmount = document.getElementById('cart-total-amount');
+            const cartCount = document.querySelector('.cart-count');
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            const paymentSection = document.querySelector('.payment-section');
+            const backToCartBtn = document.querySelector('.back-to-cart');
+            const submitOrderBtn = document.querySelector('.submit-order');
+            const requiredLinksContainer = document.querySelector('.required-links');
+            const paymentAmount = document.getElementById('payment-amount');
+            
+            let cart = [];
+            let qrCode = null;
+            
+            // Open/Close Cart
+            cartIcon.addEventListener('click', function() {
+                cartSidebar.classList.add('open');
+                overlay.classList.add('active');
+            });
+            
+            closeCart.addEventListener('click', function() {
+                cartSidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+            
+            overlay.addEventListener('click', function() {
+                cartSidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+            
+            // Add to Cart
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const service = this.dataset.service;
+                    const price = parseInt(this.dataset.price);
+                    const type = this.dataset.type;
+                    const linkType = this.dataset.linkType;
+                    
+                    // Add item to cart
+                    cart.push({ 
+                        service, 
+                        price,
+                        type,
+                        linkType
+                    });
+                    
+                    // Update cart UI
+                    updateCartUI();
+                    
+                    // Show cart sidebar
+                    cartSidebar.classList.add('open');
+                    overlay.classList.add('active');
+                });
+            });
+            
+            // Update Cart UI
+            function updateCartUI() {
+                // Clear cart items
+                cartItemsContainer.innerHTML = '';
+                
+                // Add items to cart
+                let total = 0;
+                
+                cart.forEach((item, index) => {
+                    total += item.price;
+                    
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'cart-item';
+                    cartItem.innerHTML = `
+                        <div class="cart-item-info">
+                            <h4>${item.service}</h4>
+                            <div class="cart-item-price">₹${item.price}</div>
+                        </div>
+                        <button class="cart-item-remove" data-index="${index}">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    `;
+                    
+                    cartItemsContainer.appendChild(cartItem);
+                });
+                
+                // Update total
+                cartTotalAmount.textContent = `₹${total}`;
+                
+                // Update cart count
+                cartCount.textContent = cart.length;
+                
+                // Add event listeners to remove buttons
+                const removeButtons = document.querySelectorAll('.cart-item-remove');
+                removeButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const index = parseInt(this.dataset.index);
+                        cart.splice(index, 1);
+                        updateCartUI();
+                    });
+                });
+            }
+            
+            // Helper function to get appropriate link labels
+            function getLinkLabel(type, linkType) {
+                const labels = {
+                    youtube: {
+                        channel: "YouTube Channel Link",
+                        video: "YouTube Video Link",
+                        live: "YouTube Live Stream Link"
+                    },
+                    instagram: {
+                        profile: "Instagram Profile Link",
+                        post: "Instagram Post Link",
+                        story: "Instagram Story Link",
+                        live: "Instagram Live Link"
+                    },
+                    facebook: {
+                        page: "Facebook Page Link",
+                        post: "Facebook Post Link",
+                        video: "Facebook Video Link",
+                        live: "Facebook Live Link",
+                        story: "Facebook Story Link"
+                    },
+                    telegram: {
+                        group: "Telegram Group Link",
+                        channel: "Telegram Channel Link",
+                        post: "Telegram Post Link",
+                        story: "Telegram Story Link"
+                    },
+                    tiktok: {
+                        profile: "TikTok Profile Link",
+                        video: "TikTok Video Link",
+                        live: "TikTok Live Link",
+                        story: "TikTok Story Link"
+                    },
+                    twitter: {
+                        profile: "Twitter Profile Link",
+                        tweet: "Twitter Tweet Link"
+                    },
+                    spotify: {
+                        profile: "Spotify Profile Link",
+                        track: "Spotify Track Link",
+                        playlist: "Spotify Playlist Link"
+                    },
+                    whatsapp: {
+                        channel: "WhatsApp Channel Link",
+                        post: "WhatsApp Post Link"
+                    },
+                    canva: {
+                        account: "Canva Account Email"
+                    }
+                };
+                
+                return labels[type]?.[linkType] || `${type} ${linkType} link`;
+            }
+            
+            // Helper function to get appropriate link placeholders
+            function getLinkPlaceholder(type, linkType) {
+                const placeholders = {
+                    youtube: {
+                        channel: "https://www.youtube.com/channel/...",
+                        video: "https://www.youtube.com/watch?v=...",
+                        live: "https://www.youtube.com/live/..."
+                    },
+                    instagram: {
+                        profile: "https://www.instagram.com/username/",
+                        post: "https://www.instagram.com/p/postid/",
+                        story: "Your Instagram username",
+                        live: "Your Instagram username"
+                    },
+                    facebook: {
+                        page: "https://www.facebook.com/pagename/",
+                        post: "https://www.facebook.com/permalink.php?story_fbid=...",
+                        video: "https://www.facebook.com/watch/?v=...",
+                        live: "Your Facebook page username",
+                        story: "Your Facebook username"
+                    },
+                    telegram: {
+                        group: "https://t.me/groupname",
+                        channel: "https://t.me/channelname",
+                        post: "https://t.me/channelname/postid",
+                        story: "Your Telegram username"
+                    },
+                    tiktok: {
+                        profile: "https://www.tiktok.com/@username",
+                        video: "https://www.tiktok.com/@username/video/...",
+                        live: "Your TikTok username",
+                        story: "Your TikTok username"
+                    },
+                    twitter: {
+                        profile: "https://twitter.com/username",
+                        tweet: "https://twitter.com/username/status/..."
+                    },
+                    spotify: {
+                        profile: "https://open.spotify.com/user/...",
+                        track: "https://open.spotify.com/track/...",
+                        playlist: "https://open.spotify.com/playlist/..."
+                    },
+                    whatsapp: {
+                        channel: "Your WhatsApp channel invite link",
+                        post: "Your WhatsApp post reference"
+                    },
+                    canva: {
+                        account: "your@email.com"
+                    }
+                };
+                
+                return placeholders[type]?.[linkType] || `Enter ${getLinkLabel(type, linkType).toLowerCase()}`;
+            }
+            
+            // Checkout Button
+            checkoutBtn.addEventListener('click', function() {
+                if (cart.length === 0) {
+                    alert('Your cart is empty!');
+                    return;
+                }
+                
+                // Calculate total
+                const total = cart.reduce((sum, item) => sum + item.price, 0);
+                paymentAmount.textContent = `₹${total}`;
+                
+                // Generate QR code
+                if (qrCode) {
+                    qrCode.clear();
+                    document.getElementById('qr-code').innerHTML = '';
+                }
+                
+                qrCode = new QRCode(document.getElementById("qr-code"), {
+                    text: `upi://pay?pa=nadim.74x-1@okhdfcbank&pn=SocialBoost&am=${total}&cu=INR`,
+                    width: 200,
+                    height: 200,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+                
+                // Show required link fields based on services in cart
+                requiredLinksContainer.innerHTML = '';
+                
+                // Get unique service types in cart
+                const serviceTypes = [...new Set(cart.map(item => item.type))];
+                
+                serviceTypes.forEach(type => {
+                    // Get all link types for this service type
+                    const linkTypes = cart
+                        .filter(item => item.type === type)
+                        .map(item => item.linkType);
+                    
+                    // Get unique link types
+                    const uniqueLinkTypes = [...new Set(linkTypes)];
+                    
+                    uniqueLinkTypes.forEach(linkType => {
+                        const linkGroup = document.createElement('div');
+                        linkGroup.className = 'link-group';
+                        
+                        // Add description for multiple services of same type
+                        const servicesForThisType = cart.filter(item => item.type === type && item.linkType === linkType);
+                        let description = '';
+                        
+                        if (servicesForThisType.length > 1) {
+                            description = `<p class="link-description">For: ${servicesForThisType.map(s => s.service).join(', ')}</p>`;
+                        }
+                        
+                        linkGroup.innerHTML = `
+                            <label for="${type}-${linkType}-link">${getLinkLabel(type, linkType)}</label>
+                            ${description}
+                            <input type="${linkType === 'account' ? 'text' : 'url'}" 
+                                   id="${type}-${linkType}-link" 
+                                   placeholder="${getLinkPlaceholder(type, linkType)}" 
+                                   required>
+                            ${servicesForThisType.length > 1 ? `
+                            <div class="same-link-option">
+                                <label>
+                                    <input type="checkbox" id="${type}-${linkType}-same-link" checked>
+                                    Use same link for all ${type} ${linkType} services
+                                </label>
+                            </div>
+                            ` : ''}
+                        `;
+                        requiredLinksContainer.appendChild(linkGroup);
+                    });
+                });
+                
+                // Show payment section
+                document.querySelector('.cart-total').style.display = 'none';
+                document.querySelector('.cart-items').style.display = 'none';
+                paymentSection.style.display = 'block';
+            });
+            
+            // Back to Cart button
+            backToCartBtn.addEventListener('click', function() {
+                paymentSection.style.display = 'none';
+                document.querySelector('.cart-total').style.display = 'block';
+                document.querySelector('.cart-items').style.display = 'block';
+            });
+            
+            // Submit Order button
+            submitOrderBtn.addEventListener('click', function() {
+                const paymentName = document.getElementById('payment-name').value;
+                const paymentNumber = document.getElementById('payment-number').value;
+                const paymentUtr = document.getElementById('payment-utr').value;
+                
+                // Validate basic fields
+                if (!paymentName || !paymentNumber || !paymentUtr) {
+                    alert('Please fill all required fields');
+                    return;
+                }
+                
+                // Validate links
+                const linkInputs = document.querySelectorAll('.link-group input[type="url"], .link-group input[type="text"]');
+                let allLinksValid = true;
+                let linkValidationMessage = '';
+                
+                linkInputs.forEach(input => {
+                    if (!input.value) {
+                        allLinksValid = false;
+                        input.style.borderColor = 'red';
+                        linkValidationMessage += `- ${input.previousElementSibling.textContent} is required\n`;
+                    } else {
+                        input.style.borderColor = '';
+                        
+                        // Basic URL validation for URL fields
+                        if (input.type === 'url' && !input.value.match(/^(https?:\/\/)/i)) {
+                            allLinksValid = false;
+                            input.style.borderColor = 'red';
+                            linkValidationMessage += `- ${input.previousElementSibling.textContent} should be a valid URL starting with http:// or https://\n`;
+                        }
+                    }
+                });
+                
+                if (!allLinksValid) {
+                    alert('Please correct the following:\n\n' + linkValidationMessage);
+                    return;
+                }
+                
+                // Prepare order data
+                const orderData = {
+                    name: paymentName,
+                    number: paymentNumber,
+                    utr: paymentUtr,
+                    total: cart.reduce((sum, item) => sum + item.price, 0),
+                    date: new Date().toLocaleString(),
+                    services: cart.map(item => item.service),
+                    links: {}
+                };
+                
+                // Collect all links
+                linkInputs.forEach(input => {
+                    const [type, linkType] = input.id.split('-').slice(0, 2);
+                    if (!orderData.links[type]) {
+                        orderData.links[type] = {};
+                    }
+                    orderData.links[type][linkType] = input.value;
+                });
+                
+                // Send order to Telegram bot
+                sendToTelegramBot(orderData);
+                
+                // Reset cart
+                cart = [];
+                updateCartUI();
+                paymentSection.style.display = 'none';
+                document.querySelector('.cart-total').style.display = 'block';
+                document.querySelector('.cart-items').style.display = 'block';
+                document.getElementById('payment-name').value = '';
+                document.getElementById('payment-number').value = '';
+                document.getElementById('payment-utr').value = '';
+                linkInputs.forEach(input => input.value = '');
+                
+                // Close cart
+                cartSidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+            
+            // Function to send order to Telegram bot
+            function sendToTelegramBot(orderData) {
+                const botToken = '7517272784:AAEZK1Wg7ny-4Q3q0nil3MtQFRBnVgILEQc';
+                const chatId = '1875622037';
+                
+                // Format message
+                let message = `📦 *New Order Received* 📦\n\n`;
+                message += `🛒 *Services:*\n${orderData.services.join('\n')}\n\n`;
+                message += `💰 *Total Amount:* ₹${orderData.total}\n`;
+                message += `📅 *Date & Time:* ${orderData.date}\n\n`;
+                message += `👤 *Customer Details:*\n`;
+                message += `- Name: ${orderData.name}\n`;
+                message += `- Number: ${orderData.number}\n`;
+                message += `- UTR: ${orderData.utr}\n\n`;
+                message += `🔗 *Links Provided:*\n`;
+                
+                // Add links to message
+                for (const [type, links] of Object.entries(orderData.links)) {
+                    for (const [linkType, url] of Object.entries(links)) {
+                        message += `- ${getLinkLabel(type, linkType)}: ${url}\n`;
+                    }
+                }
+                
+                // Send via Telegram Bot API
+                fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message,
+                        parse_mode: 'Markdown'
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Message sent to Telegram:', data);
+                    alert('Your order has been placed successfully! We will process it soon.');
+                })
+                .catch(error => {
+                    console.error('Error sending to Telegram:', error);
+                    alert('Order placed! If you have any issues, please contact support.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
